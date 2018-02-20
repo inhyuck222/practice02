@@ -20,28 +20,28 @@ public class Prob5 {
 				rePlay = false;
 			}
 			
-			System.out.println(k);
-			
 			System.out.println("수를 결정하였습니다. 맞추어 보세요");
 			System.out.println("1 - 100");
 			
 			System.out.println(answerCount++ + ">>");
 			answer = scanner.nextInt();
 			
-			if(k == answer) {
+			if(k > answer) {
+				System.out.println("더 높게");
+			}else if(k < answer){
+				System.out.println("더 낮게");
+			}else {
 				System.out.println("맞았습니다.");
 				System.out.println("다시하겠습니까?(y/n)");								
 				replayAnswer = scanner.next();
 				
 				answerCount = 1;
 				
-				if(replayAnswer.equals("y")) {
-					play = true;
-					rePlay = true;
-					continue;
+				if(replayAnswer.equals("n")) {
+					break;
 				}
-				play = false;
-				rePlay = false;
+				play = true;
+				rePlay = true;
 			}
 		}
 		
