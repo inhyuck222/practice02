@@ -3,6 +3,10 @@ package prob3;
 public class Prob3 {
 	
 	public static void printCharArray(char[] source) {
+		if(source == null) {
+			return;
+		}
+		
 		for(int i=0;i<source.length;i++) {
 			System.out.print(source[i]);
 		}
@@ -10,6 +14,10 @@ public class Prob3 {
 	}
 	
 	public static void replaceSpace(char[] source) {
+		if(source == null) {
+			return;
+		}
+		
 		for(int i=0;i<source.length;i++) {
 			if(source[i] == ' ') {
 				source[i] = ',';
